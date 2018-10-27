@@ -265,7 +265,7 @@ h1 {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: white;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -275,7 +275,7 @@ body.disable-scroll {
 }
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -308,14 +308,14 @@ body.disable-scroll {
   </div>
   <div class= "col-md-6">
   <ul class="nav nav-pills nav-justified">
-    <li ><a href="#section1">UI Designs/Prototypes</a></li>
     <li><a href="#section2">Projects</a></li>
     <li><a href="#section3">Artwork</a></li>
+    <li ><a href="Jasmine Mann_r2018.pdf" target="_blank">Resume</a></li>
   </ul>
 </div>
   <div class= "col-md-3">
     <ul class="nav nav-pills navbar-right">
-    <li style="padding-right: 20px;"><a href="Jasmine Mann_r2018.pdf" target="_blank">Resume</a></li>
+
   </ul>
   </div>
 </div>
@@ -351,7 +351,7 @@ body.disable-scroll {
 <div class="col-md-1">
 </div>
 </div>
-<div id="section1">
+<div id="section2">
 </div>
 </div>
 <!-- end jumbotron -->
@@ -359,14 +359,18 @@ body.disable-scroll {
 <!-- Begin content -->
 <center><span class="line"></span></center>
 
-<!-- Designs prototypes start -->
+<!-- Projects start -->
 <div id="uiIcons" class="container">
 <center><div class="w3-container">
-  <h2>UI Designs & Prototypes</h2>
-  <img id="uiBtn" src="superspork.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+  <h2>Projects</h2>
+  <img id="uiBtn" src="sss-2.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+  <img src="s3.png" class="img-thumbnail" alt="slip ship"  height="200" width="230">
+  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
 </div></center>
 </div>
-<!-- Design prototypes end -->
 <center><div id="myModal2" class="modal2">
 <div class="model2-content">
 <h1 style="color: white;"> Super Spork </h1>
@@ -378,22 +382,6 @@ body.disable-scroll {
 
 
 </div></center>
-
-<center><span id="section2" class="line2"></span></center>
-
-
-<!-- Projects start -->
-<div  class="container">
-<center><div class="w3-container">
-  <h2>Projects</h2>
-  <img src="superspork.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="superspork.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="superspork.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="superspork.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="superspork.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-</div></center>
-</div>
-
 <center><span id="section3" class="line2"></span></center>
 
 <!-- Artwork container start -->
@@ -458,6 +446,11 @@ $("body").addClass("disable-scroll");
 window.onclick = function(event) {
   if(event.target == modal2) {
     modal2.style.display = "none";
+    $("body").removeClass("disable-scroll");
+
+  }
+  if(event.target == modal) {
+    modal.style.display = "none";
     $("body").removeClass("disable-scroll");
 
   }
