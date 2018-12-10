@@ -201,7 +201,15 @@ h1 {
     transition: 0.3s;
 
 }
+#projThumb{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+#projThumb:hover{
+  opacity: 0.2;
+}
 #uiBtn {
   cursor: pointer;
 }
@@ -308,9 +316,9 @@ body.disable-scroll {
   </div>
   <div class= "col-md-6">
   <ul class="nav nav-pills nav-justified">
-    <li><a href="#section2">Projects</a></li>
-    <li><a href="#section3">Artwork</a></li>
-    <li ><a href="Jasmine Mann_r2018.pdf" target="_blank">Resume</a></li>
+    <li ><a href="#section1">Projects</a></li>
+    <li><a href="#section2">Artwork</a></li>
+    <li><a href="Jasmine Mann_r2018.pdf" target="_blank">Resume</a></li>
   </ul>
 </div>
   <div class= "col-md-3">
@@ -363,12 +371,10 @@ body.disable-scroll {
 <div id="uiIcons" class="container">
 <center><div class="w3-container">
   <h2>Projects</h2>
-  <img id="uiBtn" src="sss-2.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="s3.png" class="img-thumbnail" alt="slip ship"  height="200" width="230">
-  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
-  <img src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+
+  <a href="ss.html" target="_blank"><img id="projThumb" src="sss-2.png" class="img-thumbnail" alt="super spork"  height="200" width="230"></a>
+  <img id="projThumb" src="s3.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
+  <img id="projThumb" src="placeholder.png" class="img-thumbnail" alt="super spork"  height="200" width="230">
 </div></center>
 </div>
 <center><div id="myModal2" class="modal2">
@@ -380,9 +386,6 @@ body.disable-scroll {
 
 </div>
 
-
-</div></center>
-<center><span id="section3" class="line2"></span></center>
 
 <!-- Artwork container start -->
 <div class="container">
@@ -435,26 +438,6 @@ body.disable-scroll {
 
 
 
-
-var modal2 = document.getElementById('myModal2');
-var btn = document.getElementById("uiBtn");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick=function() {
-  modal2.style.display = "block";
-$("body").addClass("disable-scroll");
-}
-window.onclick = function(event) {
-  if(event.target == modal2) {
-    modal2.style.display = "none";
-    $("body").removeClass("disable-scroll");
-
-  }
-  if(event.target == modal) {
-    modal.style.display = "none";
-    $("body").removeClass("disable-scroll");
-
-  }
-}
 
 
 
