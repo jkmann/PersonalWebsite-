@@ -83,6 +83,9 @@ h2 { font-family: Righteous; font-size: 1px; font-style: normal; font-variant: n
       margin-bottom: 100px;
   }
 
+  .mySlides {display:none}
+
+
 </style>
 </head>
 
@@ -136,8 +139,89 @@ h2 { font-family: Righteous; font-size: 1px; font-style: normal; font-variant: n
 </div></center>
 </div>
 
-<div class="container">
-  <center>  </center>
+
+<div  class="container">
+<center><div  class="w3-container">
+  <center><img src="ID4.png" style=" background-color: white; padding-top:100px; padding-bottom: 20px;"></center>
+</div></center>
+</div>
+<div class="row" style="padding-top: 30px; padding-bottom:50px;">
+<div class="col-md-2">
+</div>
+  <div class="col-md-5" style="padding-top: 70px;">
+    <img src="MockupText.png" style=" background-color: white;  padding-bottom: 20px;"></center>
+  </div>
+  <div class="col-md-5">
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides2" src="Mock1.png" style="width:50%">
+  <img class="mySlides2" src="Mock2.png" style="width:50%">
+  <img class="mySlides2" src="Mock3.png" style="width:50%">
+  <img class="mySlides2" src="Mock4.png" style="width:50%">
+  <img class="mySlides2" src="Mock5.png" style="width:50%">
+  <img class="mySlides2" src="Mock6.png" style="width:50%">
+  <img class="mySlides2" src="Mock7.png" style="width:50%">
+  <img class="mySlides2" src="Mock8.png" style="width:50%">
+</div>
+</div>
+</div>
+
+<div  class="container">
+<center><div  class="w3-container">
+  <center><img src="Focus Group Text.png" style=" background-color: white;  padding-top: 50px;  padding-bottom: 50px;"></center>
+</div></center>
+</div>
+
+<div class="row" style="padding-top: 30px; padding-bottom:100px;">
+<div class="col-md-2">
+</div>
+  <div class="col-md-5" style="padding-top: 70px;">
+    <img src="FGtext.png" style=" background-color: white;  padding-bottom: 20px;"></center>
+  </div>
+  <div class="col-md-5">
+<div class="w3-content w3-display-container" style="max-width:800px padding-top: 50px;">
+  <img class="mySlides" src="Focus Group 1.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 2.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 3.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 4.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 5.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 6.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 7.png" style="width:50%">
+  <img class="mySlides" src="Focus Group 8.png" style="width:50%">
+</div>
+</div>
+</div>
+
+<div  class="container">
+<center><div  class="w3-container">
+  <center><img src="FD.png" style=" background-color: white;  padding-top: 50px;  padding-bottom: 50px;"></center>
+</div></center>
+</div>
+
+<div class="row" style="padding-top: 30px; padding-bottom:100px;">
+<div class="col-md-2">
+</div>
+  <div class="col-md-5" style="padding-top: 70px;">
+    <img src="fdt1.png" style=" background-color: white;  padding-bottom: 20px;"></center>
+  </div>
+  <div class="col-md-5">
+<div class="w3-content w3-display-container" style="max-width:800px padding-top: 50px;">
+  <img class="mySlides3" src="fd1.png" style="width:50%">
+  <img class="mySlides3" src="fd2.png" style="width:50%">
+  <img class="mySlides3" src="fd3.png" style="width:50%">
+  <img class="mySlides3" src="fd4.png" style="width:50%">
+  <img class="mySlides3" src="fd5.png" style="width:50%">
+  <img class="mySlides3" src="fd6.png" style="width:50%">
+  <img class="mySlides3" src="fd7.png" style="width:50%">
+  <img class="mySlides3" src="fd8.png" style="width:50%">
+  <img class="mySlides3" src="fd9.png" style="width:50%">
+  <img class="mySlides3" src="fd10.png" style="width:50%">
+  <img class="mySlides3" src="fd11.png" style="width:50%">
+  <img class="mySlides3" src="fd12.png" style="width:50%">
+  <img class="mySlides3" src="fd13.png" style="width:50%">
+</div>
+</div>
+</div>
+
 
 <!-- bottom jumbotron start -->
 <center><div style="width: 100%; height: 310px;margin-bottom: 0px; "class="jumbotron">
@@ -150,6 +234,62 @@ h2 { font-family: Righteous; font-size: 1px; font-style: normal; font-variant: n
 <!-- end bottom jumbotron -->
 
 <script>
+
+var myIndex = 0;
+var myIndex2 = 0;
+var myIndex3 = 0;
+
+carousel2();
+carousel();
+carousel3();
+
+
+
+function carousel2() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    //var y = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+       //y[i].style.display ="none";
+    }
+    myIndex2++;
+    if (myIndex2 > x.length) {myIndex2 = 1}
+    x[myIndex2-1].style.display = "block";
+    //y[myIndex-1].style.display = "block";
+    setTimeout(carousel2, 2000); // Change image every 2 seconds
+}
+
+function carousel() {
+    var i;
+    //var x = document.getElementsByClassName("mySlides");
+    var y = document.getElementsByClassName("mySlides");
+    for (i = 0; i < y.length; i++) {
+      // x[i].style.display = "none";
+       y[i].style.display ="none";
+    }
+    myIndex++;
+    if (myIndex > y.length) {myIndex = 1}
+    //x[myIndex-1].style.display = "block";
+    y[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function carousel3() {
+    var i;
+    var z = document.getElementsByClassName("mySlides3");
+    //var y = document.getElementsByClassName("mySlides");
+    for (i = 0; i < z.length; i++) {
+       z[i].style.display = "none";
+       //y[i].style.display ="none";
+    }
+    myIndex3++;
+    if (myIndex3 > z.length) {myIndex3 = 1}
+    z[myIndex3-1].style.display = "block";
+    //y[myIndex-1].style.display = "block";
+    setTimeout(carousel3, 2000); // Change image every 2 seconds
+}
+
 // When the user clicks on the button, scroll to the top of the document
 $(document).ready(function() {
     $('#myBtn').click(function(event){
