@@ -86,6 +86,78 @@ h2 { font-family: Righteous; font-size: 1px; font-style: normal; font-variant: n
   .mySlides {display:none}
 
 
+
+  #uiBtn {
+    cursor: pointer;
+  }
+  .modal, .modal2 {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (image) */
+  .modal-content, .modal2-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+  }
+  @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)}
+      to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+      from {transform:scale(0)}
+      to {transform:scale(1)}
+  }
+
+  /* The Close Button */
+  .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 80px;
+      font-weight: bold;
+      transition: 0.3s;
+
+  }
+
+  .close:hover,
+  .close:focus {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  /* Add Animation */
+  .modal-content {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+  }
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+      .modal-content {
+          width: 100%;
+      }
+  }
+  .item{
+    height: 600px;
+  }
+
+
 </style>
 </head>
 
@@ -121,28 +193,28 @@ h2 { font-family: Righteous; font-size: 1px; font-style: normal; font-variant: n
 <div  class="container">
 <center><div style="padding-top: 80px;" class="w3-container">
   <center><img src="SuperSporkLogo.png"></center>
-  <center><img src="IP2-2.png"style="background-color: white; padding-top: 40px; padding-bottom: 20px;"></center>
+  <center><img src="ipt1.png"style="background-color: white; padding-top: 40px; padding-bottom: 20px;"></center>
 
 </div></center>
 </div>
 
 <div  class="container">
 <center><div style="" class="w3-container">
-  <center><img src="UCS5.png"style=" background-color: white;  padding-bottom: 50px; "></center>
+  <center><img src="ucstext.png"style=" background-color: white;  padding-bottom: 50px; "></center>
 
 </div></center>
 </div>
 
 <div  class="container">
 <center><div  class="w3-container">
-  <center><img src="CL6png" style=" background-color: white;  padding-bottom: 20px;"></center>
+  <center><img src="clt.png" style=" background-color: white;  padding-bottom: 20px;"></center>
 </div></center>
 </div>
 
 
 <div  class="container">
 <center><div  class="w3-container">
-  <center><img src="ID4.png" style=" background-color: white; padding-top:100px; padding-bottom: 20px;"></center>
+  <center><img src="dpt.png" style=" background-color: white; padding-top:100px; padding-bottom: 20px;"></center>
 </div></center>
 </div>
 <div class="row" style="padding-top: 30px; padding-bottom:50px;">
@@ -221,20 +293,31 @@ h2 { font-family: Righteous; font-size: 1px; font-style: normal; font-variant: n
 </div>
 </div>
 </div>
+<center><img src="doct.png" ></center>
+<center><img style="margin-top: 20px; margin-bottom: 50px;" id="uiBtn" src="docbutt.png" class="img-thumbnail" alt="super spork"  height="200" width="230"></center>
+
+
+<center><div id="myModal" class="modal">
+<div class="model-content">
+  <span class="close">&times;</span>
+<h1 style="color: white;"> Super Spork </h1>
+<center><span  class="line3" ></span></center>
+<embed src="ssdoc.pdf" width="800px" height="1900px" />
+</div>
+</div></center>
 
 
 <!-- bottom jumbotron start -->
-<center><div style="width: 100%; height: 310px;margin-bottom: 0px; "class="jumbotron">
-    <center style="font-size: 30px; color: white; padding-bottom: 10px;">Let's Connect!</center>
-     <center style="font-size: 16px; color: white; padding-bottom: 5px;"><span class="glyphicon glyphicon-envelope"></span> jkmann24@gmail.com</center>
-    <center style="font-size: 16px; color: white; padding-bottom: 5px;"><span class="glyphicon glyphicon-earphone"></span> 209.740.2235</center>
-    <center style="font-size: 16px; color: white; padding-bottom: 5px;"><span class="glyphicon glyphicon-map-marker"></span> Based in San Francisco Bay Area</center>
-    <center style="color: white; padding-top: 15px;"><span class="glyphicon glyphicon-arrow-up"></span><button style="background-color: transparent; border-left: 0px; border-right:0px; border-top:0px;" onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button></center>
-</div></center>
+<div style="width: 100%; height: 310px;margin-bottom: 0px; "class="jumbotron">
+    <center style="font-size: 30px; color: white; padding-bottom: 10px; padding-left: 60px;">Let's Connect!</center>
+     <center style="font-size: 16px; color: white; padding-bottom: 5px; padding-left: 50px;"><span class="glyphicon glyphicon-envelope"></span> jkmann24@gmail.com</center>
+    <center style="font-size: 16px; color: white; padding-bottom: 5px; padding-left: 50px;"><span class="glyphicon glyphicon-earphone"></span> 209.740.2235</center>
+    <center style="font-size: 16px; color: white; padding-bottom: 5px; padding-left: 50px;"><span class="glyphicon glyphicon-map-marker"></span> Based in San Francisco Bay Area</center>
+    <center style="color: white; padding-top: 15px; padding-left: 50px;"><span class="glyphicon glyphicon-arrow-up"></span><button style="background-color: transparent; border-left: 0px; border-right:0px; border-top:0px;" onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button></center>
+</div>
 <!-- end bottom jumbotron -->
 
 <script>
-
 var myIndex = 0;
 var myIndex2 = 0;
 var myIndex3 = 0;
@@ -243,7 +326,25 @@ carousel2();
 carousel();
 carousel3();
 
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("uiBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick=function() {
+  modal.style.display = "block";
+$("body").addClass("disable-scroll");
+}
+window.onclick = function(event) {
+  if(event.target == modal) {
+    modal.style.display = "none";
+    $("body").removeClass("disable-scroll");
+  }
+}
+var span = document.getElementsByClassName("close")[0];
 
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
 function carousel2() {
     var i;
