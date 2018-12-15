@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jasmine Mann | Slip The Ship</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+
+<style>
+
+body{
+    background: url("background sts.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: none;
+  }
+
+.navbar{
+  overflow: hidden;
+  top:0;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  text-align: right;
+
+  z-index: 1;
+}
+
+.nav{
+  text-align: right;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+
+  font-size: 20px;
+   color: white;
+   background-color: black;
+
+}
+.nav>li>a{
+  font-size: 20px;
+  color: grey;
+}
+.nav>li>a:hover{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+.jumbotron{
+    background: url("back1.jpg");
+    width: 100%;
+    padding-right: 50px;
+
+}
+
+#profpic {
+  margin-top: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+    padding: 5px;
+    width: 350px;
+}
+
+h1 {
+  padding-top: 80px;
+}
+
+
+.img-thumbnail{
+  width:auto;
+  height: 100%;
+  margin: 10px;
+
+}
+
+.header{
+  height: 100px;
+  background: url("back1.jpg");
+}
+
+.line{
+    display:inline-block;
+    border-bottom:2px #5B3400 solid;
+    margin-left:5px;
+    width:80%;
+
+}
+.line2{
+    display:inline-block;
+    border-bottom:2px #5B3400 solid;
+    margin-left:5px;
+    width:80%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+#stslogo:hover{
+  opacity: 0.2;
+  color: white;
+  
+}
+
+#collageCol img {
+  margin-top: 25px;
+  vertical-align: middle;
+}
+
+#collageCol img:hover{
+  opacity: 0.2;
+}
+#collageCol{
+  background-color: white;
+}
+
+#collageCol .content-overlay{
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+#art1, #art2, #art3, #art4, #art5, #art6, #art7, #art8 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#uiBtn {
+  cursor: pointer;
+}
+.modal, .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content, .modal2-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Add Animation */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+.item{
+  height: 600px;
+}
+
+.footer{
+  width: 100%;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  z-index: 12;
+  background-color: rgb(134, 147, 158);
+  position: fixed;
+  bottom: 0;
+}
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <!-- navbar start -->
+  <nav class="navbar navbar-inverse">
+
+  <div class ="row">
+  <div class= "col-md-3">
+  </div>
+  <div class= "col-md-6">
+  <ul class="nav nav-pills nav-justified">
+    <li ><a href="portfoliol.html#section1">Projects</a></li>
+    <li><a href="portfoliol.html#section2">Artwork</a></li>
+    <li><a href="Jasmine Mann_r2018.pdf" target="_blank">Resume</a></li>
+  </ul>
+  </div>
+  <div class= "col-md-3">
+    <ul class="nav nav-pills navbar-right">
+
+  </ul>
+  </div>
+  </div>
+  </nav>
+  <!-- end navbar -->
+
+
+
+
+<!-- Begin content -->
+<div  class="container">
+<center><div style="padding-top: 200px;" class="w3-container">
+  <center><img src="ststext.png" style=" padding-top: 40px; padding-bottom: 20px;"></center>
+  <center><a href="https://github.com/jkmann/Slip-The-Ship" target="_blank"><img id="stslogo"  src="stslogo.png"style=" padding-top: 40px; padding-bottom: 20px;"></a></center>
+</div></center>
+</div>
+<!-- End content -->
+
+<!-- bottom jumbotron start
+<div style="width: 100%; height: 270px;margin-bottom: 0px; "class="jumbotron footer">
+    <center style="font-size: 30px; color: white; padding-bottom: 10px; padding-left: 60px;">Let's Connect!</center>
+     <center style="font-size: 16px; color: white; padding-bottom: 5px; padding-left: 50px;"><span class="glyphicon glyphicon-envelope"></span> jkmann24@gmail.com</center>
+    <center style="font-size: 16px; color: white; padding-bottom: 5px; padding-left: 50px;"><span class="glyphicon glyphicon-earphone"></span> 209.740.2235</center>
+    <center style="font-size: 16px; color: white; padding-bottom: 5px; padding-left: 50px;"><span class="glyphicon glyphicon-map-marker"></span> Based in San Francisco Bay Area</center>
+    <center style="color: white; padding-top: 15px; padding-left: 50px;"><span class="glyphicon glyphicon-arrow-up"></span><button style="background-color: transparent; border-left: 0px; border-right:0px; border-top:0px;" onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button></center>
+</div> -->
+<!-- end bottom jumbotron -->
+
+
+<script>
+
+
+$(function () {
+	$('a[href*="#"]:not([href="#"])').click(function () {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
+});
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+$(document).ready(function() {
+    $('#myBtn').click(function(event){
+      event.preventDefault();
+      $("html, body").animate({scrollTop:0}, "slow");
+      return false;
+    });
+});
+</script>
+</body>
+</html>
